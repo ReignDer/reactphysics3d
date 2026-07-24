@@ -1,27 +1,18 @@
-target("ImGui")
+target("ReactPhysics")
 	set_kind("static")
 	set_languages("cxx23")
 
-	set_targetdir ("bin/" .. outputdir .. "/ImGui")
-	set_objectdir ("bin-int/" .. outputdir .. "/ImGui")
+	set_targetdir ("bin/" .. outputdir .. "/ReactPhysics")
+	set_objectdir ("bin-int/" .. outputdir .. "/ReactPhysics")
 
 	add_headerfiles(
-        "imconfig.h",
-		"imgui.h",
-		"imgui_internal.h",
-        "imstb_rectpack.h",
-        "imstb_textedit.h",
-        "imstb_truetype.h"
+        "include/**.h"
 
 
 	)
 
 	add_files(
-		"imgui.cpp",
-		"imgui_demo.cpp",
-		"imgui_draw.cpp",
-		"imgui_tables.cpp",
-		"imgui_widgets.cpp"
+		"src/**.cpp"
 
 	)
 
